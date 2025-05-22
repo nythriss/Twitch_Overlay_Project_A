@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transparent Webcam Frame</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+    }
+
+    .webcam-wrapper {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      pointer-events: none; /* damit nichts klickbar ist */
+    }
+
+    .name-label {
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+      margin-bottom: 6px;
+      position:fixed;
+      bottom: 3px;
+    }
+
+    .webcam-frame {
+      width: 480px;
+      aspect-ratio: 16 / 9;
+      position: relative;
+    }
+
+    .frame-border {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      background: linear-gradient(
+        135deg,
+        #2E1A47,
+        #4B2CA0,
+        #2F60AE,
+        #3561C4,
+        #3E77A1,
+        #5C3E80
+      );
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      mask-composite: exclude;
+      -webkit-mask-composite: destination-out;
+      -webkit-mask: 
+        padding-box, 
+        content-box;
+      mask: 
+        padding-box, 
+        content-box;
+      -webkit-mask-image: transparent, 
+        linear-gradient(#000 0 0);
+      
+      mask-image: 
+        linear-gradient(#000 0 0), 
+        linear-gradient(#000 0 0);
+      -webkit-mask-origin: border-box;
+      mask-origin: border-box;
+      -webkit-mask-clip: content-box, padding-box;
+      mask-clip: content-box, padding-box;
+      border-radius: 8px;
+    }
+
+    /* Optionaler Inset-Schatten für 3D-Effekt */
+    .frame-border::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border-radius: 8px;
+      box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.6),
+                  inset 0 -4px 12px rgba(255, 255, 255, 0.05);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="webcam-wrapper">
+    <div class="name-label">Anima</div>
+    <div class="webcam-frame">
+      <div class="frame-border"></div>
+    </div>
+  </div>
+</body>
+</html>
