@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Transparent Webcam Frame</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Creepster&family=Griffy&family=Playwrite+US+Modern:wght@100..400&family=Princess+Sofia&family=Rubik+Wet+Paint&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Underdog&family=UnifrakturCook:wght@700&display=swap"
+    rel="stylesheet">
   <style>
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
       background: black;
@@ -17,18 +24,21 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      pointer-events: none; /* damit nichts klickbar ist */
+      pointer-events: none;
     }
 
     .name-label {
-      font-family: Arial, sans-serif;
-      font-size: 20px;
-      font-weight: bold;
-      color: white;
+      font-family: "Playwrite US Modern", cursive;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-size: 35px;
+      color: #EB8821;
       text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
       margin-bottom: 6px;
-      position:fixed;
-      bottom: 3px;
+      position: fixed;
+      bottom: -5px;
+      z-index: 1;
+
     }
 
     .webcam-frame {
@@ -41,29 +51,27 @@
       width: 100%;
       height: 100%;
       border-radius: 8px;
-      background: linear-gradient(
-        135deg,
-        #2E1A47,
-        #4B2CA0,
-        #2F60AE,
-        #3561C4,
-        #3E77A1,
-        #5C3E80
-      );
+      background: linear-gradient(135deg,
+          #2E1A47,
+          #4B2CA0,
+          #2F60AE,
+          #3561C4,
+          #3E77A1,
+          #5C3E80);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
       mask-composite: exclude;
       -webkit-mask-composite: destination-out;
-      -webkit-mask: 
-        padding-box, 
+      -webkit-mask:
+        padding-box,
         content-box;
-      mask: 
-        padding-box, 
+      mask:
+        padding-box,
         content-box;
-      -webkit-mask-image: transparent, 
+      -webkit-mask-image: transparent,
         linear-gradient(#000 0 0);
-      
-      mask-image: 
-        linear-gradient(#000 0 0), 
+
+      mask-image:
+        linear-gradient(#000 0 0),
         linear-gradient(#000 0 0);
       -webkit-mask-origin: border-box;
       mask-origin: border-box;
@@ -79,17 +87,19 @@
       inset: 8px;
       border-radius: 8px;
       box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.6),
-                  inset 0 -4px 12px rgba(255, 255, 255, 0.05);
+        inset 0 -4px 12px rgba(255, 255, 255, 0.05);
       pointer-events: none;
     }
   </style>
 </head>
+
 <body>
   <div class="webcam-wrapper">
-    
+    <div class="name-label">Anima</div>
     <div class="webcam-frame">
       <div class="frame-border"></div>
     </div>
   </div>
 </body>
+
 </html>
