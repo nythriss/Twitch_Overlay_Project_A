@@ -36,7 +36,7 @@
       text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
       margin-bottom: 6px;
       position: fixed;
-      bottom: -5px;
+      bottom: -7.5px;
       z-index: 1;
 
     }
@@ -52,13 +52,23 @@
       height: 100%;
       border-radius: 8px;
       background: linear-gradient(135deg,
-          #2E1A47,
-          #4B2CA0,
-          #2F60AE,
-          #3561C4,
-          #3E77A1,
-          #5C3E80);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+          #6a00a8,
+          /* mehr Lila direkt zu Beginn */
+          #7020ff,
+          /* kräftiges Electric Purple */
+          #52008a,
+          /* wieder ein sattes Lila mittendrin */
+          #006aff,
+          /* intensives Königsblau */
+          #007eff,
+          /* strahlendes Himmelblau */
+          #8b00c9,
+          /* tiefer Lilaton als Abschluss */
+          #00aaff);
+      /* bleibt als kühlender Kontrast */
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.75);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.75);
       mask-composite: exclude;
       -webkit-mask-composite: destination-out;
       -webkit-mask:
@@ -95,7 +105,7 @@
 
 <body>
   <div class="webcam-wrapper">
-    <div class="name-label">Anima</div>
+
     <div class="webcam-frame">
       <div class="frame-border"></div>
     </div>
