@@ -10,6 +10,8 @@
   <meta charset="UTF-8">
   <title>Gradient Border Transparent Inner</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Satisfy&display=swap');
+
     body {
       background: #111;
       display: flex;
@@ -40,8 +42,6 @@
       -webkit-mask-composite: xor;
       mask-composite: exclude;
       padding: 8px;
-      /* thickness of the gradient border */
-
     }
 
     .cam-wrapper::before {
@@ -56,33 +56,19 @@
     }
 
     .nametag {
-      font-family: "Playwrite US Modern", cursive;
+      font-family: playwrite US Modern, cursive;
       font-optical-sizing: auto;
       font-weight: 800;
       font-style: normal;
-      font-size: 2.5rem;
+      font-size: 3rem;
       position: absolute;
-      bottom: -7.5px;
+      bottom: -4px;
       left: 50%;
       transform: translate(-50%, 50%);
       z-index: 3;
-      letter-spacing: 0.15em;
-      background: linear-gradient(90deg,
-          white 0%,
-          #2e003e 15%,
-          #4b0082 30%,
-          #7f00ff 50%,
-          #4b0082 70%,
-          #2e003e 85%,
-          #000000 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      color: transparent;
-      text-shadow: 0 0 25px black, 0 0 50px black;
-      text-transform: uppercase;
-      text-align: center;
-
+      color: #691639;
+      text-shadow: #111 0px 0px 5px, #111 0px 0px 10px, #111 0px 0px 15px, #111 0px 0px 20px, #111 0px 0px 25px, #111 0px 0px 30px,
+        #111 0px 0px 35px, #111 0px 0px 40px, #111 0px 0px 45px;
     }
 
     .cam {
