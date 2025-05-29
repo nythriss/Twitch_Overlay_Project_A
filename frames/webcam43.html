@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gradient Border with Shadow (4/3)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: transparent;
+      margin: 0;
+      height: 100vh;
+      position: relative;
+    }
+
+    .cam {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 400px;
+      aspect-ratio: 4 / 3; /* Angepasst auf 4:3 */
+      /* ✨ Hier kommt der Glow außen herum ✨ */
+      box-shadow: 10px -10px 25px 6px rgba(138, 0, 201, 0.5);
+      border-radius: 8px;
+      overflow: visible;
+    }
+
+    .cam::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 8px;
+      padding: 8px;
+      /* Gradient-Rahmen in ::before, so dass die Maske nur das Innere ausstanzt */
+      background: linear-gradient(
+        135deg,
+        #6a00a8,
+        #7020ff,
+        #52008a,
+        #006aff,
+        #007eff,
+        #8b00c9,
+        #00aaff
+      );
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: 1;
+      border-radius: 8px;
+    }
+
+    .nametag {
+      font-family: "Satisfy", cursive;
+      font-weight: 800;
+      font-size: 5rem;
+      position: absolute;
+      bottom: -2.25rem;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      z-index: 2;
+      color: #D13A78;
+      text-shadow: black 10px 10px 20px;
+      -webkit-text-stroke: 0.1px black;
+      text-stroke: 0.1px black;
+    }
+  </style>
+</head>
+<body>
+  <div class="cam">
+    <h2 class="nametag">Anima</h2>
+  </div>
+</body>
+</html>
