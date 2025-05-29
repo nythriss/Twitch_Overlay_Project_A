@@ -1,89 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Modern&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Playwrite+US+Modern:wght@100..400&display=swap"
-  rel="stylesheet">
-
 <head>
   <meta charset="UTF-8">
-  <title>Gradient Border Transparent Inner</title>
+  <title>Gradient Border with Shadow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Creepster&family=Griffy&family=Lobster&family=Playwrite+US+Modern:wght@100..400&family=Princess+Sofia&family=Rubik+Wet+Paint&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Underdog&family=UnifrakturCook:wght@700&display=swap');
-
     body {
       background: transparent;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
+      height: 100vh;
+      position: relative;
     }
 
-    .cam-wrapper {
-      bottom: 20px;
-      right: 20px;
+    .cam {
+      position: fixed;
+      bottom: 35px;
+      right: 35px;
       width: 550px;
       aspect-ratio: 16 / 9;
-      position: relative;
-      background: linear-gradient(135deg,
-          #6a00a8,
-          #7020ff,
-          #52008a,
-          #006aff,
-          #007eff,
-          #8b00c9,
-          #00aaff);
+      /* ✨ Hier kommt der Glow außen herum ✨ */
+      box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.95);
       border-radius: 8px;
+      overflow: visible;
+    }
+
+    .cam::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 8px;
+      padding: 8px;
+      background: linear-gradient(
+        135deg,
+        #6a00a8,
+        #7020ff,
+        #52008a,
+        #006aff,
+        #007eff,
+        #8b00c9,
+        #00aaff
+      );
       -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
-      padding: 8px;
-    }
-
-    .cam-wrapper::before {
-      content: "";
-      position: absolute;
-      top: 8px;
-      left: 8px;
-      right: 8px;
-      bottom: 8px;
-      border-radius: 8px;
       z-index: 1;
+      border-radius: 8px;
     }
 
     .nametag {
-      font-family: "Playwrite US Modern", cursive;
-      font-optical-sizing: auto;
+      font-family: "Satisfy", cursive;
       font-weight: 800;
-      font-style: normal;
-      font-size: 3rem;
+      font-size: 5rem;
       position: absolute;
-      bottom: -.5rem;
+      bottom: -3.5rem;
       left: 50%;
       transform: translate(-50%, 50%);
-      z-index: 3;
+      z-index: 2;
       color: #D13A78;
-      text-shadow: black 0px 0px 20px;
-    }
-
-    .cam {
-      position: fixed;
-      /* or absolute, depending on context */
-      bottom: 15px;
-      right: 15px;
+      text-shadow: black 10px 10px 20px;
+      -webkit-text-stroke: 0.1px black;
+      text-stroke: 0.1px black;
     }
   </style>
 </head>
-
 <body>
   <div class="cam">
-    <div class="cam-wrapper"></div>
     <h2 class="nametag">Anima</h2>
   </div>
 </body>
-
 </html>
