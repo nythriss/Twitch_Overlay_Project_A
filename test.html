@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test doc</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-</head>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Gradient Box</title>
+  <style>
     body {
-        background-color: white;
-        color: white;
-        font-family: 'Playwrite US Modern', cursive;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
 
-    .cam {
-  width: 550px;
-  aspect-ratio: 16 / 9;
-  position: relative;
-  background: linear-gradient(135deg,
-    #6a00a8,
-    #7020ff,
-    #52008a,
-    #006aff,
-    #007eff,
-    #8b00c9,
-    #00aaff);
-  border-radius: 8px;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-  padding: 8px; /* thickness of the gradient border */
-}
+    .neon-box {
+      width: 500px;
+      height: 300px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #6a0dad, #007bff, #ff00aa);
+      box-shadow:
+        0 0 20px rgba(106, 13, 173, 0.5),
+        0 0 40px rgba(0, 123, 255, 0.4),
+        0 0 60px rgba(255, 0, 170, 0.3);
+      padding: 10px;
+      box-sizing: border-box;
+    }
 
-.cam::before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border-radius: 6px; /* subtract padding to maintain border-radius alignment */
-}
+    .neon-box::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      background: inherit;
+      filter: blur(20px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
 
-</style>
-
+    .neon-box-wrapper {
+      position: relative;
+    }
+  </style>
+</head>
 <body>
-    <div class="cam"></div>
+  <div class="neon-box-wrapper">
+    <div class="neon-box"></div>
+  </div>
 </body>
-
 </html>
