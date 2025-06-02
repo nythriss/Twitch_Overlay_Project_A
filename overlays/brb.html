@@ -11,7 +11,41 @@
             margin: 0;
             height: 100vh;
             position: relative;
-            background: black;
+            background: transparent;
+        }
+
+        .cam {
+            position: fixed;
+            top: 50px;
+            left: 15%;
+            width: 700px;
+            aspect-ratio: 16 / 9;
+            box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.95);
+            border-radius: 8px;
+            overflow: visible;
+        }
+
+        .cam::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 8px;
+            padding: 8px;
+            background: linear-gradient(135deg,
+                    #6a00a8,
+                    #7020ff,
+                    #52008a,
+                    #006aff,
+                    #007eff,
+                    #8b00c9,
+                    #00aaff);
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: 1;
+            border-radius: 8px;
         }
 
         .chat {
@@ -52,9 +86,9 @@
         .chatnametag {
             font-family: "Satisfy", cursive;
             font-weight: 800;
-            font-size: 5rem;
+            font-size: 7rem;
             position: absolute;
-            bottom: -3.5rem;
+            bottom: -5.5rem;
             right: -30px;
             transform: translate(-50%, 50%);
             z-index: 2;
@@ -66,7 +100,7 @@
 
         .bg {
             position: fixed;
-            top: 50%;
+            top: 52.5%;
             left: 5%;
             width: 1100px;
             height: 350px;
@@ -109,10 +143,13 @@
 <body>
     <div class="bg">
         <h2 class="chatnametag_centered">BE RIGHT BACK</h2>
+         <div class="cam"></div>
     </div>
     <div class="chat">
         <h2 class="chatnametag">Chat</h2>
+        
     </div>
+   
 </body>
 
 </html>
