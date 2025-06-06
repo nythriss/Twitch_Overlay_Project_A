@@ -28,6 +28,7 @@ This overlay includes everything you need to enhance your stream's aesthetic and
 
 ## 📌 Notes
 
+- This overlay is **static**, as requested by the official user.
 - This overlay is **non-interactive** – viewers cannot click elements.
 - Make sure to use the **recommended resolution** to maintain the design proportions.
 
