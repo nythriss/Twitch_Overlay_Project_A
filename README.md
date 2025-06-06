@@ -15,7 +15,7 @@ This overlay includes everything you need to enhance your stream's aesthetic and
 
 ## ⚙️ Setup Instructions
 
-1. Download or clone the repository.
+1. Download the repository as .zip.
 2. Add the HTML files as a **browser source** in your OBS or streaming software.
 3. Make sure to adjust dimensions to match the fixed design (e.g. 1920x1080 canvas).
 4. You can customize the nameplates or any content by editing the `.html` or `.css` files.
