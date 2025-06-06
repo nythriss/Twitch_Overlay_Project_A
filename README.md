@@ -35,13 +35,13 @@ This overlay includes everything you need to enhance your stream's aesthetic and
 ## 🧙‍♀️ About the Creator
 
 Made by **Nythriss**, a dark soul with a passion for immersive and aesthetic experiences.  
-Catch me live or drop a message on [Twitch](https://twitch.tv/nythriss) 🖤
+Catch me live or drop a message on [Twitch](https://twitch.tv/nythriss) or [Instagram](https://www.instagram.com/nythriss) 🖤
 
 ---
 
 ## 📜 License & Usage
 
-This design is **free to use for personal streams**, but redistribution, modification, or commercial use without permission is **not allowed**.
+This design is **free to use for personal Usage ONLY**, but redistribution, modification, or commercial use without permission is **not allowed**.
 
 > Please respect the creator’s work.  
 > If you'd like to use it in a special way, feel free to reach out first 🌙
