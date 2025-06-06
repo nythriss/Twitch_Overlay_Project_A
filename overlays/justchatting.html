@@ -171,6 +171,37 @@
             z-index: 1;
             border-radius: 8px;
         }
+
+        .user-banner {
+            position: absolute;
+            bottom: 15px;
+            left: 10%;
+            background-color: transparent;
+            padding: 10px 30px;
+            display: flex;
+            gap: 80px;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .user-group {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .user-group img {
+            height: 75px;
+            width: auto;
+        }
+
+        .username,
+        .invite-text {
+            color: #D13A78;
+            font-family: "Satisfy", cursive;
+            font-weight: 800;
+            font-size: 3rem;
+        }
     </style>
 
 </head>
@@ -182,9 +213,22 @@
     <div class="chat">
         <h2 class="chatnametag">Chat</h2>
     </div>
-    <div class="cam2">
+    <div class="cam2"></div>
+    <div class="user-banner">
+        <!-- X Section -->
+        <div class="user-group">
+            <img src="images/x.jpg" alt="X Logo" style="border-radius: 50%;">
+            <span class="username">@AnimasCall</span>
+        </div>
 
+        <!-- Discord Section -->
+        <div class="user-group">
+            <img src="images/discord.png" alt="Discord Logo">
+            <span class="invite-text">discord.gg/ZPRFxrAjGf</span>
+        </div>
     </div>
 </body>
+
+<script src="script.js"></script>
 
 </html>
