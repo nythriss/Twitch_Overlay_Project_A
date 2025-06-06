@@ -5,7 +5,7 @@ This repository contains a **custom Twitch overlay** crafted with love, mystique
 
 ## ✨ What’s Inside?
 
-This overlay includes everything you need to enhance your stream's aesthetic and bring a gothic, elegant vibe to your channel:
+This overlay includes everything you need to enhance your stream's aesthetic and bring a elegant vibe to your channel:
 
 - 🎥 **Camera Frame** – 16:9 aspect ratio with animated gradient border  
 - 💬 **Chat Window** – Stylish and clean layout with unique visuals  
