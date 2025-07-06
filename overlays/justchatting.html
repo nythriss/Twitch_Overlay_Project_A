@@ -20,7 +20,7 @@
             right: 5%;
             width: 500px;
             aspect-ratio: 16 / 9;
-            box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.95);
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
             border-radius: 8px;
             overflow: visible;
         }
@@ -54,7 +54,7 @@
             right: 5%;
             width: 500px;
             height: 650px;
-            box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.95);
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
             border-radius: 8px;
             overflow: visible;
             background-color: #000;
@@ -119,7 +119,7 @@
             left: 2.5%;
             width: 1250px;
             aspect-ratio: 16 / 9;
-            box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.95);
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
             border-radius: 8px;
             overflow: visible;
         }
@@ -145,6 +145,7 @@
             mask-composite: exclude;
             z-index: 1;
             border-radius: 8px;
+            
         }
 
         .user-banner {
@@ -157,6 +158,29 @@
             gap: 80px;
             align-items: center;
             border-radius: 10px;
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
+        }
+
+        .user-banner img {
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
+        }
+
+        .user-banner2 {
+            position: absolute;
+            top: 50px;
+            left: 25%;
+            background-color: transparent;
+            padding: 10px 30px;
+            display: flex;
+            gap: 80px;
+            align-items: center;
+            border-radius: 10px;
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
+        }
+
+        .user-banner2 img {
+            background-color: red;
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
         }
 
         .user-group {
@@ -169,7 +193,6 @@
             height: 75px;
             width: auto;
             border-radius: 50%;
-            box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.95);
         }
 
         .username,
@@ -205,6 +228,13 @@
         <div class="user-group">
             <img src="images/discord.png" alt="Discord Logo">
             <span class="invite-text">discord.gg/ZPRFxrAjGf</span>
+        </div>
+    </div>
+
+    <div class="user-banner2">
+        <div class="user-group">
+            <img src="images/youtube.png" alt="Discord Logo">
+            <span class="invite-text">@AnimaCalls</span>
         </div>
     </div>
 </body>
